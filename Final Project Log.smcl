@@ -1,0 +1,359 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\Amara\OneDrive\Desktop\Senior Year\Fall Semester 2024\ECON 393 - Econometrics\Research Project\Final\Final Project Log.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}12 Dec 2024, 16:13:48
+
+{com}. reg lnreer lnrgdppc lnfdi oil pols rir oilrent rent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(7, 15)        = {res}    18.63
+{txt}       Model {c |} {res}  1.8659994         7  .266571343   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  .21459783        15  .014306522   {txt}R-squared       ={res}    0.8969
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8487
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .11961
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .6144361{col 26}{space 2} .6305644{col 37}{space 1}    0.97{col 46}{space 3}0.345{col 54}{space 4}  -.72958{col 67}{space 3} 1.958452
+{txt}{space 7}lnfdi {c |}{col 14}{res}{space 2} .0123385{col 26}{space 2} .0624377{col 37}{space 1}    0.20{col 46}{space 3}0.846{col 54}{space 4}-.1207444{col 67}{space 3} .1454214
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} .0066754{col 26}{space 2} .0033472{col 37}{space 1}    1.99{col 46}{space 3}0.065{col 54}{space 4}-.0004589{col 67}{space 3} .0138097
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0634077{col 26}{space 2} .0120237{col 37}{space 1}    5.27{col 46}{space 3}0.000{col 54}{space 4} .0377798{col 67}{space 3} .0890356
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0151113{col 26}{space 2} .0059799{col 37}{space 1}   -2.53{col 46}{space 3}0.023{col 54}{space 4}-.0278572{col 67}{space 3}-.0023655
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1735055{col 26}{space 2} .0755156{col 37}{space 1}   -2.30{col 46}{space 3}0.036{col 54}{space 4}-.3344632{col 67}{space 3}-.0125477
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1480486{col 26}{space 2} .0727201{col 37}{space 1}    2.04{col 46}{space 3}0.060{col 54}{space 4}-.0069506{col 67}{space 3} .3030477
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.122454{col 26}{space 2} 5.221316{col 37}{space 1}   -0.21{col 46}{space 3}0.833{col 54}{space 4}-12.25143{col 67}{space 3} 10.00652
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. newey lnreer lnrgdppc lnfdi oil pols rir oilrent rent, lag(1) force
+
+{txt}Regression with Newey–West standard errors{col 49}Number of obs{col 67}= {res}        23
+{txt}Maximum lag = {res}1{col 49}{txt}F(  7,        15){col 67}= {res}     41.60
+{col 49}{txt}Prob > F{col 67}= {res}    0.0000
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 14}{c |}{col 26}  Newey–West
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .6144361{col 26}{space 2} .5892394{col 37}{space 1}    1.04{col 46}{space 3}0.314{col 54}{space 4}-.6414978{col 67}{space 3}  1.87037
+{txt}{space 7}lnfdi {c |}{col 14}{res}{space 2} .0123385{col 26}{space 2}  .041998{col 37}{space 1}    0.29{col 46}{space 3}0.773{col 54}{space 4}-.0771781{col 67}{space 3} .1018551
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} .0066754{col 26}{space 2} .0026123{col 37}{space 1}    2.56{col 46}{space 3}0.022{col 54}{space 4} .0011073{col 67}{space 3} .0122435
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0634077{col 26}{space 2} .0099929{col 37}{space 1}    6.35{col 46}{space 3}0.000{col 54}{space 4} .0421084{col 67}{space 3} .0847071
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0151113{col 26}{space 2} .0065748{col 37}{space 1}   -2.30{col 46}{space 3}0.036{col 54}{space 4}-.0291251{col 67}{space 3}-.0010976
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1735055{col 26}{space 2} .1053024{col 37}{space 1}   -1.65{col 46}{space 3}0.120{col 54}{space 4}-.3979522{col 67}{space 3} .0509413
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1480486{col 26}{space 2} .1077614{col 37}{space 1}    1.37{col 46}{space 3}0.190{col 54}{space 4}-.0816394{col 67}{space 3} .3777366
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.122454{col 26}{space 2} 5.054482{col 37}{space 1}   -0.22{col 46}{space 3}0.827{col 54}{space 4}-11.89583{col 67}{space 3}  9.65092
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. pwcorr lnreer lnrgdppc lnfdi oil pols rir oilrent rent
+
+             {txt}{c |}   lnreer lnrgdppc    lnfdi      oil     pols      rir  oilrent
+{hline 13}{c +}{hline 63}
+      lnreer {c |} {res}  1.0000 
+    {txt}lnrgdppc {c |} {res}  0.1561   1.0000 
+       {txt}lnfdi {c |} {res} -0.1713   0.7235   1.0000 
+         {txt}oil {c |} {res}  0.1121   0.8444   0.8230   1.0000 
+        {txt}pols {c |} {res}  0.7152  -0.6675  -0.7703  -0.6462   1.0000 
+         {txt}rir {c |} {res}  0.1198   0.4009   0.2973   0.3457  -0.0012   1.0000 
+     {txt}oilrent {c |} {res} -0.4061  -0.6124  -0.1719  -0.2761   0.0105  -0.4143   1.0000 
+        {txt}rent {c |} {res} -0.3423  -0.6794  -0.2695  -0.3711   0.1316  -0.4626   0.9897 
+
+             {txt}{c |}     rent
+{hline 13}{c +}{hline 9}
+        rent {c |} {res}  1.0000 
+
+{com}. dwstat
+
+{txt}Number of gaps in sample = {res}3
+
+{txt}Durbin–Watson d-statistic({res}  8{txt},{res}    23{txt}) = {res} 1.225132
+
+{com}. vif
+{err}not appropriate after regress, nocons;
+use option uncentered to get uncentered VIFs
+{txt}{search r(301), local:r(301);}
+
+{com}. reg lnreer lnrgdppc lnfdi oil pols rir oilrent rent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(7, 15)        = {res}    18.63
+{txt}       Model {c |} {res}  1.8659994         7  .266571343   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  .21459783        15  .014306522   {txt}R-squared       ={res}    0.8969
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8487
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .11961
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .6144361{col 26}{space 2} .6305644{col 37}{space 1}    0.97{col 46}{space 3}0.345{col 54}{space 4}  -.72958{col 67}{space 3} 1.958452
+{txt}{space 7}lnfdi {c |}{col 14}{res}{space 2} .0123385{col 26}{space 2} .0624377{col 37}{space 1}    0.20{col 46}{space 3}0.846{col 54}{space 4}-.1207444{col 67}{space 3} .1454214
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} .0066754{col 26}{space 2} .0033472{col 37}{space 1}    1.99{col 46}{space 3}0.065{col 54}{space 4}-.0004589{col 67}{space 3} .0138097
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0634077{col 26}{space 2} .0120237{col 37}{space 1}    5.27{col 46}{space 3}0.000{col 54}{space 4} .0377798{col 67}{space 3} .0890356
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0151113{col 26}{space 2} .0059799{col 37}{space 1}   -2.53{col 46}{space 3}0.023{col 54}{space 4}-.0278572{col 67}{space 3}-.0023655
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1735055{col 26}{space 2} .0755156{col 37}{space 1}   -2.30{col 46}{space 3}0.036{col 54}{space 4}-.3344632{col 67}{space 3}-.0125477
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1480486{col 26}{space 2} .0727201{col 37}{space 1}    2.04{col 46}{space 3}0.060{col 54}{space 4}-.0069506{col 67}{space 3} .3030477
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.122454{col 26}{space 2} 5.221316{col 37}{space 1}   -0.21{col 46}{space 3}0.833{col 54}{space 4}-12.25143{col 67}{space 3} 10.00652
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. VIF
+{err}command {bf}VIF{sf} not defined by VIF.ado
+{txt}{search r(199), local:r(199);}
+
+{com}. vif
+
+{txt}    Variable {c |}       VIF       1/VIF  
+{hline 13}{c +}{hline 22}
+{space 8}rent {c |} {res}   241.80    0.004136
+{txt}{space 5}oilrent {c |} {res}   238.16    0.004199
+{txt}{space 4}lnrgdppc {c |} {res}    24.98    0.040026
+{txt}{space 9}oil {c |} {res}    10.90    0.091756
+{txt}{space 8}pols {c |} {res}     6.00    0.166726
+{txt}{space 7}lnfdi {c |} {res}     4.94    0.202450
+{txt}{space 9}rir {c |} {res}     2.02    0.494270
+{txt}{hline 13}{c +}{hline 22}
+    Mean VIF {c |} {res}    75.54
+
+{com}. reg lnreer lnfdi oil pols rir oilrent rent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(6, 16)        = {res}    21.65
+{txt}       Model {c |} {res} 1.85241537         6  .308735895   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} .228181863        16  .014261366   {txt}R-squared       ={res}    0.8903
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8492
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .11942
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 7}lnfdi {c |}{col 14}{res}{space 2} .0063712{col 26}{space 2} .0620385{col 37}{space 1}    0.10{col 46}{space 3}0.919{col 54}{space 4}-.1251447{col 67}{space 3}  .137887
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} .0094477{col 26}{space 2} .0017604{col 37}{space 1}    5.37{col 46}{space 3}0.000{col 54}{space 4} .0057157{col 67}{space 3} .0131797
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0569738{col 26}{space 2} .0100326{col 37}{space 1}    5.68{col 46}{space 3}0.000{col 54}{space 4} .0357056{col 67}{space 3} .0782419
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0162993{col 26}{space 2} .0058451{col 37}{space 1}   -2.79{col 46}{space 3}0.013{col 54}{space 4}-.0286903{col 67}{space 3}-.0039084
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1770247{col 26}{space 2} .0753101{col 37}{space 1}   -2.35{col 46}{space 3}0.032{col 54}{space 4}-.3366749{col 67}{space 3}-.0173745
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1362348{col 26}{space 2} .0715891{col 37}{space 1}    1.90{col 46}{space 3}0.075{col 54}{space 4}-.0155272{col 67}{space 3} .2879968
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} 3.790378{col 26}{space 2}  1.35525{col 37}{space 1}    2.80{col 46}{space 3}0.013{col 54}{space 4} .9173758{col 67}{space 3}  6.66338
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. generate lncpi = ln(cpi)
+{txt}(1 missing value generated)
+
+{com}. reg lnreer lnrgdppc lnfdi oil pols rir oilrent rent lncpi
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(8, 14)        = {res}    15.53
+{txt}       Model {c |} {res} 1.86984702         8  .233730878   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  .21075021        14  .015053586   {txt}R-squared       ={res}    0.8987
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8408
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .12269
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .7804884{col 26}{space 2} .7254331{col 37}{space 1}    1.08{col 46}{space 3}0.300{col 54}{space 4}-.7754109{col 67}{space 3} 2.336388
+{txt}{space 7}lnfdi {c |}{col 14}{res}{space 2} .0027978{col 26}{space 2} .0667695{col 37}{space 1}    0.04{col 46}{space 3}0.967{col 54}{space 4}-.1404086{col 67}{space 3} .1460042
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} .0066923{col 26}{space 2} .0034336{col 37}{space 1}    1.95{col 46}{space 3}0.072{col 54}{space 4}-.0006721{col 67}{space 3} .0140566
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0624534{col 26}{space 2} .0124773{col 37}{space 1}    5.01{col 46}{space 3}0.000{col 54}{space 4} .0356923{col 67}{space 3} .0892144
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0163528{col 26}{space 2} .0066073{col 37}{space 1}   -2.47{col 46}{space 3}0.027{col 54}{space 4} -.030524{col 67}{space 3}-.0021816
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1724847{col 26}{space 2} .0774885{col 37}{space 1}   -2.23{col 46}{space 3}0.043{col 54}{space 4} -.338681{col 67}{space 3}-.0062884
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1447165{col 26}{space 2} .0748852{col 37}{space 1}    1.93{col 46}{space 3}0.074{col 54}{space 4}-.0158962{col 67}{space 3} .3053292
+{txt}{space 7}lncpi {c |}{col 14}{res}{space 2}-.0527259{col 26}{space 2} .1042912{col 37}{space 1}   -0.51{col 46}{space 3}0.621{col 54}{space 4}-.2764083{col 67}{space 3} .1709565
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-1.904467{col 26}{space 2} 5.574797{col 37}{space 1}   -0.34{col 46}{space 3}0.738{col 54}{space 4}-13.86122{col 67}{space 3} 10.05228
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. generate lngdppc = ln(gdppc)
+{txt}(1 missing value generated)
+
+{com}. reg lnreer lngdppc lnfdi oil pols rir oilrent rent lncpi
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(8, 14)        = {res}    93.76
+{txt}       Model {c |} {res} 2.04247702         8  .255309628   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} .038120215        14  .002722872   {txt}R-squared       ={res}    0.9817
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.9712
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .05218
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 5}lngdppc {c |}{col 14}{res}{space 2} .5756532{col 26}{space 2} .0689025{col 37}{space 1}    8.35{col 46}{space 3}0.000{col 54}{space 4} .4278722{col 67}{space 3} .7234343
+{txt}{space 7}lnfdi {c |}{col 14}{res}{space 2}-.0362915{col 26}{space 2} .0288167{col 37}{space 1}   -1.26{col 46}{space 3}0.228{col 54}{space 4}-.0980971{col 67}{space 3} .0255142
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} -.002007{col 26}{space 2} .0016766{col 37}{space 1}   -1.20{col 46}{space 3}0.251{col 54}{space 4}-.0056029{col 67}{space 3} .0015889
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0323624{col 26}{space 2} .0056486{col 37}{space 1}    5.73{col 46}{space 3}0.000{col 54}{space 4} .0202473{col 67}{space 3} .0444774
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0060733{col 26}{space 2} .0030678{col 37}{space 1}   -1.98{col 46}{space 3}0.068{col 54}{space 4}-.0126531{col 67}{space 3} .0005064
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.0628266{col 26}{space 2} .0356327{col 37}{space 1}   -1.76{col 46}{space 3}0.100{col 54}{space 4}-.1392512{col 67}{space 3}  .013598
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .0623941{col 26}{space 2} .0328643{col 37}{space 1}    1.90{col 46}{space 3}0.078{col 54}{space 4}-.0080928{col 67}{space 3}  .132881
+{txt}{space 7}lncpi {c |}{col 14}{res}{space 2}  -.00261{col 26}{space 2} .0395483{col 37}{space 1}   -0.07{col 46}{space 3}0.948{col 54}{space 4}-.0874326{col 67}{space 3} .0822126
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .9764758{col 26}{space 2} .7957733{col 37}{space 1}    1.23{col 46}{space 3}0.240{col 54}{space 4}-.7302881{col 67}{space 3}  2.68324
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnreer lnrgdppc fdi oil pols rir oilrent rent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(7, 15)        = {res}    19.49
+{txt}       Model {c |} {res} 1.87451728         7  .267788183   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} .206079951        15  .013738663   {txt}R-squared       ={res}    0.9010
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8547
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .11721
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .6249958{col 26}{space 2} .6155824{col 37}{space 1}    1.02{col 46}{space 3}0.326{col 54}{space 4} -.687087{col 67}{space 3} 1.937079
+{txt}{space 9}fdi {c |}{col 14}{res}{space 2} 1.52e-11{col 26}{space 2} 1.87e-11{col 37}{space 1}    0.81{col 46}{space 3}0.429{col 54}{space 4}-2.47e-11{col 67}{space 3} 5.51e-11
+{txt}{space 9}oil {c |}{col 14}{res}{space 2}  .005857{col 26}{space 2} .0033769{col 37}{space 1}    1.73{col 46}{space 3}0.103{col 54}{space 4}-.0013406{col 67}{space 3} .0130546
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0628291{col 26}{space 2} .0111875{col 37}{space 1}    5.62{col 46}{space 3}0.000{col 54}{space 4} .0389834{col 67}{space 3} .0866747
+{txt}{space 9}rir {c |}{col 14}{res}{space 2} -.016961{col 26}{space 2}  .006168{col 37}{space 1}   -2.75{col 46}{space 3}0.015{col 54}{space 4}-.0301078{col 67}{space 3}-.0038142
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1808265{col 26}{space 2} .0711785{col 37}{space 1}   -2.54{col 46}{space 3}0.023{col 54}{space 4}-.3325399{col 67}{space 3} -.029113
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1532842{col 26}{space 2} .0681432{col 37}{space 1}    2.25{col 46}{space 3}0.040{col 54}{space 4} .0080404{col 67}{space 3}  .298528
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.919817{col 26}{space 2} 4.794673{col 37}{space 1}   -0.19{col 46}{space 3}0.850{col 54}{space 4}-11.13942{col 67}{space 3} 9.299786
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. generate nfdi = fdi/1000000000
+{txt}(1 missing value generated)
+
+{com}. reg lnreer lnrgdppc nfdi oil pols rir oilrent rent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(7, 15)        = {res}    19.49
+{txt}       Model {c |} {res} 1.87451728         7  .267788184   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  .20607995        15  .013738663   {txt}R-squared       ={res}    0.9010
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8547
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .11721
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .6249958{col 26}{space 2} .6155824{col 37}{space 1}    1.02{col 46}{space 3}0.326{col 54}{space 4} -.687087{col 67}{space 3} 1.937079
+{txt}{space 8}nfdi {c |}{col 14}{res}{space 2} .0152231{col 26}{space 2}  .018729{col 37}{space 1}    0.81{col 46}{space 3}0.429{col 54}{space 4}-.0246968{col 67}{space 3} .0551429
+{txt}{space 9}oil {c |}{col 14}{res}{space 2}  .005857{col 26}{space 2} .0033769{col 37}{space 1}    1.73{col 46}{space 3}0.103{col 54}{space 4}-.0013406{col 67}{space 3} .0130546
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0628291{col 26}{space 2} .0111875{col 37}{space 1}    5.62{col 46}{space 3}0.000{col 54}{space 4} .0389834{col 67}{space 3} .0866747
+{txt}{space 9}rir {c |}{col 14}{res}{space 2} -.016961{col 26}{space 2}  .006168{col 37}{space 1}   -2.75{col 46}{space 3}0.015{col 54}{space 4}-.0301078{col 67}{space 3}-.0038142
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1808265{col 26}{space 2} .0711785{col 37}{space 1}   -2.54{col 46}{space 3}0.023{col 54}{space 4}-.3325399{col 67}{space 3} -.029113
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1532842{col 26}{space 2} .0681432{col 37}{space 1}    2.25{col 46}{space 3}0.040{col 54}{space 4} .0080404{col 67}{space 3}  .298528
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.919817{col 26}{space 2} 4.794673{col 37}{space 1}   -0.19{col 46}{space 3}0.850{col 54}{space 4}-11.13942{col 67}{space 3} 9.299786
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnreer lnrgdppc nfdi oil pols rir oilrent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(6, 16)        = {res}    17.47
+{txt}       Model {c |} {res}  1.8049998         6    .3008333   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} .275597437        16   .01722484   {txt}R-squared       ={res}    0.8675
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8179
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .13124
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .4197227{col 26}{space 2} .6816578{col 37}{space 1}    0.62{col 46}{space 3}0.547{col 54}{space 4}-1.025327{col 67}{space 3} 1.864773
+{txt}{space 8}nfdi {c |}{col 14}{res}{space 2}  .007514{col 26}{space 2} .0206169{col 37}{space 1}    0.36{col 46}{space 3}0.720{col 54}{space 4}-.0361919{col 67}{space 3} .0512199
+{txt}{space 9}oil {c |}{col 14}{res}{space 2} .0058758{col 26}{space 2} .0037811{col 37}{space 1}    1.55{col 46}{space 3}0.140{col 54}{space 4}-.0021397{col 67}{space 3} .0138914
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0749234{col 26}{space 2} .0109853{col 37}{space 1}    6.82{col 46}{space 3}0.000{col 54}{space 4} .0516356{col 67}{space 3} .0982113
+{txt}{space 9}rir {c |}{col 14}{res}{space 2}-.0157981{col 26}{space 2} .0068821{col 37}{space 1}   -2.30{col 46}{space 3}0.036{col 54}{space 4}-.0303874{col 67}{space 3}-.0012087
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.0254287{col 26}{space 2} .0191973{col 37}{space 1}   -1.32{col 46}{space 3}0.204{col 54}{space 4}-.0661251{col 67}{space 3} .0152678
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} .9312306{col 26}{space 2} 5.288981{col 37}{space 1}    0.18{col 46}{space 3}0.862{col 54}{space 4}-10.28091{col 67}{space 3} 12.14337
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. reg lnreer lnrgdppc nfdi oil pols rir oilrent rent
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}        23
+{txt}{hline 13}{c +}{hline 34}   F(7, 15)        = {res}    19.49
+{txt}       Model {c |} {res} 1.87451728         7  .267788184   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res}  .20607995        15  .013738663   {txt}R-squared       ={res}    0.9010
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.8547
+{txt}       Total {c |} {res} 2.08059723        22  .094572602   {txt}Root MSE        =   {res} .11721
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      lnreer{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 4}lnrgdppc {c |}{col 14}{res}{space 2} .6249958{col 26}{space 2} .6155824{col 37}{space 1}    1.02{col 46}{space 3}0.326{col 54}{space 4} -.687087{col 67}{space 3} 1.937079
+{txt}{space 8}nfdi {c |}{col 14}{res}{space 2} .0152231{col 26}{space 2}  .018729{col 37}{space 1}    0.81{col 46}{space 3}0.429{col 54}{space 4}-.0246968{col 67}{space 3} .0551429
+{txt}{space 9}oil {c |}{col 14}{res}{space 2}  .005857{col 26}{space 2} .0033769{col 37}{space 1}    1.73{col 46}{space 3}0.103{col 54}{space 4}-.0013406{col 67}{space 3} .0130546
+{txt}{space 8}pols {c |}{col 14}{res}{space 2} .0628291{col 26}{space 2} .0111875{col 37}{space 1}    5.62{col 46}{space 3}0.000{col 54}{space 4} .0389834{col 67}{space 3} .0866747
+{txt}{space 9}rir {c |}{col 14}{res}{space 2} -.016961{col 26}{space 2}  .006168{col 37}{space 1}   -2.75{col 46}{space 3}0.015{col 54}{space 4}-.0301078{col 67}{space 3}-.0038142
+{txt}{space 5}oilrent {c |}{col 14}{res}{space 2}-.1808265{col 26}{space 2} .0711785{col 37}{space 1}   -2.54{col 46}{space 3}0.023{col 54}{space 4}-.3325399{col 67}{space 3} -.029113
+{txt}{space 8}rent {c |}{col 14}{res}{space 2} .1532842{col 26}{space 2} .0681432{col 37}{space 1}    2.25{col 46}{space 3}0.040{col 54}{space 4} .0080404{col 67}{space 3}  .298528
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2} -.919817{col 26}{space 2} 4.794673{col 37}{space 1}   -0.19{col 46}{space 3}0.850{col 54}{space 4}-11.13942{col 67}{space 3} 9.299786
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. dwstat
+
+{txt}Number of gaps in sample = {res}3
+
+{txt}Durbin–Watson d-statistic({res}  8{txt},{res}    23{txt}) = {res} 1.277507
+
+{com}. pwcorr lnreer lnrgdppc nfdi oil pols rir oilrent rent
+
+             {txt}{c |}   lnreer lnrgdppc     nfdi      oil     pols      rir  oilrent
+{hline 13}{c +}{hline 63}
+      lnreer {c |} {res}  1.0000 
+    {txt}lnrgdppc {c |} {res}  0.1561   1.0000 
+        {txt}nfdi {c |} {res} -0.0443   0.5713   1.0000 
+         {txt}oil {c |} {res}  0.1121   0.8444   0.7570   1.0000 
+        {txt}pols {c |} {res}  0.7152  -0.6675  -0.5182  -0.6462   1.0000 
+         {txt}rir {c |} {res}  0.1198   0.4009   0.3091   0.3457  -0.0012   1.0000 
+     {txt}oilrent {c |} {res} -0.4061  -0.6124  -0.1217  -0.2761   0.0105  -0.4143   1.0000 
+        {txt}rent {c |} {res} -0.3423  -0.6794  -0.2093  -0.3711   0.1316  -0.4626   0.9897 
+
+             {txt}{c |}     rent
+{hline 13}{c +}{hline 9}
+        rent {c |} {res}  1.0000 
+
+{com}. pwcorr lnreer lnrgdppc nfdi oil pols rir oilrent rent
+
+             {txt}{c |}   lnreer lnrgdppc     nfdi      oil     pols      rir  oilrent
+{hline 13}{c +}{hline 63}
+      lnreer {c |} {res}  1.0000 
+    {txt}lnrgdppc {c |} {res}  0.1561   1.0000 
+        {txt}nfdi {c |} {res} -0.0443   0.5713   1.0000 
+         {txt}oil {c |} {res}  0.1121   0.8444   0.7570   1.0000 
+        {txt}pols {c |} {res}  0.7152  -0.6675  -0.5182  -0.6462   1.0000 
+         {txt}rir {c |} {res}  0.1198   0.4009   0.3091   0.3457  -0.0012   1.0000 
+     {txt}oilrent {c |} {res} -0.4061  -0.6124  -0.1217  -0.2761   0.0105  -0.4143   1.0000 
+        {txt}rent {c |} {res} -0.3423  -0.6794  -0.2093  -0.3711   0.1316  -0.4626   0.9897 
+
+             {txt}{c |}     rent
+{hline 13}{c +}{hline 9}
+        rent {c |} {res}  1.0000 
+
+{com}. estat imtest, white
+
+{txt}White's test
+H0: Homoskedasticity
+Ha: Unrestricted heteroskedasticity
+
+{ralign 11:chi2({res:22})} = {res}{ralign 6:23.00}
+{txt}{ralign 11:Prob > chi2} = {res}{ralign 6:0.4017}
+
+{txt}Cameron & Trivedi's decomposition of IM-test
+
+{hline 21}{c TT}{hline 28}
+{ralign 20:Source} {c |}       chi2     df         p
+{hline 21}{c +}{hline 28}
+{ralign 20:Heteroskedasticity} {c |}{res}      23.00     22    0.4017
+{txt}{ralign 20:Skewness} {c |}{res}      13.82      7    0.0544
+{txt}{ralign 20:Kurtosis} {c |}{res}       1.16      1    0.2816
+{txt}{hline 21}{c +}{hline 28}
+{ralign 20:Total} {c |}{res}      37.98     30    0.1502
+{txt}{hline 21}{c BT}{hline 28}
+
+{com}. export delimited using "Stata Appendix"
+{res}{txt}file {bf:Stata Appendix.csv} saved
+
+{com}. outfile using "Stata Appendix", replace
+{txt}{p 0 4 2}
+(file {bf}
+Stata Appendix.raw{rm}
+not found)
+{p_end}
+
+{com}. save "C:\Users\Amara\OneDrive\Desktop\Senior Year\Fall Semester 2024\ECON 393 - Econometrics\Research Project\Final\Fin Amara.dta", replace
+{txt}{p 0 4 2}
+file {bf}
+C:\Users\Amara\OneDrive\Desktop\Senior Year\Fall Semester 2024\ECON 393 - Econometrics\Research Project\Final\Fin Amara.dta{rm}
+saved
+{p_end}
+
+{com}. exit
